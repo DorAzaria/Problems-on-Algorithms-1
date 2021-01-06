@@ -20,11 +20,11 @@ public class maxMax2 {
 
         for(int i = 2; i < arr.length; i++) {
 
-            if(max1 < arr[i]) {
+            if(max1 < arr[i]) { // n-2 comparisons
                 max2 = max1;
                 max1 = arr[i];
             }
-            else if(max2 < arr[i]) {
+            else if(max2 < arr[i]) { // n-2 comparisons
                     max2 = arr[i];
             }
 
