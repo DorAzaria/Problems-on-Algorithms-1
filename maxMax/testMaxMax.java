@@ -1,5 +1,13 @@
 package maxMax;
 
+/*
+    for 100 different arrays of size : 1000000 here's the results:
+    MaxMax1 by average : 1.63 Millis.
+    MaxMax2 by average : 1.03 Millis.
+    MaxMax3 by average : 3.57 Millis.
+    MaxMax4 by average : 285.7 Millis.
+*/
+
 public class testMaxMax {
 
     private static int[] arraysForTest(int size) {
@@ -59,5 +67,6 @@ public class testMaxMax {
         System.out.println("MaxMax2 by average : " + mm2/n + " Millis.");
         System.out.println("MaxMax3 by average : " + mm3/n + " Millis.");
         System.out.println("MaxMax4 by average : " + mm4/n + " Millis.");
+
     }
 }
