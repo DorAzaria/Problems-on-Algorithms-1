@@ -1,7 +1,7 @@
 package maxMax;
 
 /*
-    for 100 different arrays of size : 1000000 here's the results:
+    for 100 different arrays of size : 1000000, the results are:
     MaxMax1 by average : 1.63 Millis.
     MaxMax2 by average : 1.03 Millis.
     MaxMax3 by average : 3.57 Millis.
