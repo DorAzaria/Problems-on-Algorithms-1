@@ -1,4 +1,4 @@
-package parking;
+package CyclicParking;
 
 public class Node {
 

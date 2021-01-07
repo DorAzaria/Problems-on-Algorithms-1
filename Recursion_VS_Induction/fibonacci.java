@@ -1,4 +1,4 @@
-package recursionVSinduction;
+package Recursion_VS_Induction;
 
 public class fibonacci {
 

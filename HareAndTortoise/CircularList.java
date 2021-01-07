@@ -1,4 +1,4 @@
-package turtle_and_hare;
+package HareAndTortoise;
 
 public class CircularList {
 

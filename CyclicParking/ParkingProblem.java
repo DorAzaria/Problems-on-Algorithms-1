@@ -1,4 +1,4 @@
-package parking;
+package CyclicParking;
 // we need to count how many cars there is in the circular parking lot.
 // we'll mark a visited car as 'V', if we'll see another mark v without any other
 // strange mark so we're done, else, we'll keep count the cars and mark the relevant.

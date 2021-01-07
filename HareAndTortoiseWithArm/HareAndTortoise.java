@@ -1,6 +1,6 @@
-package turtle_and_hare_with_arm;
+package HareAndTortoiseWithArm;
 
-public class TurtleAndHareWithArm {
+public class HareAndTortoise {
 
     static Node theKiss = null;
 

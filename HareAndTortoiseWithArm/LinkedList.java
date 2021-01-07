@@ -1,4 +1,4 @@
-package turtle_and_hare_with_arm;
+package HareAndTortoiseWithArm;
 
 public class LinkedList {
 

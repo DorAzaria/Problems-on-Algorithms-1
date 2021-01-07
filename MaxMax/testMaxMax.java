@@ -1,4 +1,4 @@
-package maxMax;
+package MaxMax;
 
 /*
     for 100 different arrays of size : 1000000, the results are:

@@ -1,4 +1,4 @@
-package maxMax;
+package MaxMax;
 import java.util.Arrays;
 
 public class maxMax3 {

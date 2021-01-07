@@ -1,4 +1,4 @@
-package fibonacci;
+package Fibonacci;
 
 public class inductive_recursive {
 

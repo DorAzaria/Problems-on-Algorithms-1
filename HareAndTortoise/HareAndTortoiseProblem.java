@@ -1,6 +1,6 @@
-package turtle_and_hare;
+package HareAndTortoise;
 
-public class TurtleAndHareProblem {
+public class HareAndTortoiseProblem {
 
     public static boolean isCycled(CircularList list) {
         if(list.head == null)
