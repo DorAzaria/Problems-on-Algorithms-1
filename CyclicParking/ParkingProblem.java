@@ -38,11 +38,10 @@ public class ParkingProblem {
 
     public static void main(String[] args) {
         CircularList list = new CircularList();
-        list.add(new Node());
-        list.add(new Node());
-        list.add(new Node());
-        list.add(new Node());
-        list.add(new Node());
+
+        for(int i = 0 ; i < 5 ; i++)
+            list.add(new Node());
+
         list.getNode(1).signed = "v";
         list.getNode(3).signed = "v";
         list.print();
