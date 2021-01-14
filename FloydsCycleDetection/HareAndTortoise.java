@@ -44,7 +44,7 @@ public class HareAndTortoise {
         return null;
     }
 
-    public static int lengthOfCircle(LinkedList list, Node firstNodeOfCircle) {
+    public static int lengthOfCircle(Node firstNodeOfCircle) {
         int length = 0;
         Node tortoise = firstNodeOfCircle;
         length++;
@@ -74,7 +74,7 @@ public class HareAndTortoise {
         // Question 3 - return the length of the arm.
         System.out.println(length_of_arm);
         // Question 4 - return the length of the circle.
-        System.out.println(lengthOfCircle(list,firstNode));
+        System.out.println(lengthOfCircle(firstNode));
 
 
 
