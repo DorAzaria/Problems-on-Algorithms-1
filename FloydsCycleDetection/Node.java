@@ -1,4 +1,4 @@
-package HareAndTortoiseWithArm;
+package FloydsCycleDetection;
 
 public class Node {
 
