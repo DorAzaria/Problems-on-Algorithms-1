@@ -2,12 +2,12 @@ package Recursion_VS_Induction;
 
 public class fibonacci {
 
-    public static int fiboRecursive(int n) {
-        if( n == 0 || n == 1) {
-            return n;
+        public static int fiboRecursive(int n) {
+            if( n == 0 || n == 1) {
+                return n;
+            }
+            return fiboRecursive(n-1) + fiboRecursive(n-2); // O(2^N)
         }
-        return fiboRecursive(n-1) + fiboRecursive(n-2); // O(2^N)
-    }
 
     public static int fiboInductive(int n) {
         int[] arr = new int[n+1];
