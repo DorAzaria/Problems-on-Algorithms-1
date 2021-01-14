@@ -13,7 +13,6 @@ public class maxMax4 {
             number = num;
             stack = new Stack<>();
         }
-
     }
 
     public static int[] maxMax(int[] arr) {
