@@ -1,12 +1,13 @@
 package GameNumber;
+
 import java.util.Arrays;
 
-public class EvenOrOdd {
+public class Adaptive {
 
-    public static String chooseEvenOrOdd(int[] arr) {
+    public static String chooseEvenOrOdd(int[] arr, int left, int right) {
         int odd_sum = 0 , even_sum = 0;
 
-        for(int i = 0 ; i < arr.length; i++) {
+        for(int i = left ; i < right+1; i++) {
             if(i%2==0)
                 even_sum += arr[i];
             else
@@ -22,9 +23,10 @@ public class EvenOrOdd {
     public static int[] game(int[] arr) {
         int player1 = 0, player2 = 0, games = 0;
         int left_corner = 0, right_corner = arr.length-1;
-        String strategy = chooseEvenOrOdd(arr);
 
         while (games != arr.length) {
+
+            String strategy = chooseEvenOrOdd(arr, left_corner, right_corner);
 
             if(strategy.equals("even")) {
 
@@ -81,5 +83,10 @@ public class EvenOrOdd {
     public static void main(String[] args) {
         int[] arr = {1,3,6,1,3,6};
         System.out.println(Arrays.toString(game(arr)));
+        int[] arr2 = {5,4,1,5,6,4};
+        System.out.println(Arrays.toString(game(arr2)));
+        int[] arr3 = {4,1,5,9};
+        System.out.println(Arrays.toString(game(arr2)));
     }
+
 }
