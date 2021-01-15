@@ -33,9 +33,8 @@ public class testGame {
         int size = 10000, n=100;
         int g1=0, g2=0 , g3=0, g4=0;
         int[] arr;
-        int counter = 0;
         for (int i = 0; i < n; i++) {
-            counter++;
+
             arr = arraysForTest(size);
 
             int[] sol = Greedy.game(arr);
@@ -53,14 +52,13 @@ public class testGame {
                 g3++;
 
 
-            if(counter % 10 == 0) {
+            if(i % 10 == 0) {
                 sol = Dynamic.dynamic(arr);
                 if(sol[0] > sol[1])
                     g4++;
             }
 
         }
-        System.out.println(counter);
         System.out.println("for " + n + " different arrays of size : " + size + ", the results are: " );
         System.out.println("Greedy: " + g1 + " wins out of "+n+" games.");
         System.out.println("Even or Odd: " + g2 + " wins out of "+n+" games.");
