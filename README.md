@@ -1,7 +1,5 @@
-# Java Algorithms and Implementations 1
-Problems on Algorithms - Java Code
+#  Java Algorithms, Implementations and Summaries (in Hebrew)
 
-## Summaries (in Hebrew)
 [Cyclic Parking Problem](https://github.com/DorAzaria/Problems-on-Algorithms-1/blob/main/CyclicParking/CyclicParking.pdf)<br>
 [Hare And Tortoise](https://github.com/DorAzaria/Problems-on-Algorithms-1/blob/main/HareAndTortoise/HareAndTortoise.pdf)<br>
 [Floyd's Cycle Detection](https://github.com/DorAzaria/Problems-on-Algorithms-1/blob/main/FloydsCycleDetection/FloydsCycleDetection.pdf)<br>
