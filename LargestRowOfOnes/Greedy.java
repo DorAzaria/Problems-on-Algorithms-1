@@ -1,4 +1,4 @@
-package OnesMaximumRow;
+package LargestRowOfOnes;
 
 public class Greedy {
 
