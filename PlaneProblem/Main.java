@@ -15,20 +15,26 @@ public class Main {
         System.out.println();
     }
 
-    public static void main(String[] args) {
-        Node[][] matrix = test.getTest1();
+    public static void runTest(Node[][] matrix) {
         GenerateInduction.generateMatrix(matrix);
         printMatrix(matrix);
 
         // Inductive
-        System.out.println(pathsInduction.getCornerPath(matrix));
+        pathsInduction.getCornerPath(matrix);
         pathsInduction.getAllPaths(matrix);
-        System.out.println(pathsInduction.getPath(matrix,2,1));
+        pathsInduction.getPathOfNode(matrix,2,1);
 
         // Recursive
-        System.out.println(pathsRecursion.getCornerPath(matrix));
+        pathsRecursion.getCornerPath(matrix);
         pathsRecursion.getAllPaths(matrix);
-        System.out.println(pathsRecursion.getOnePath(matrix,2,1));
+        pathsRecursion.getPathOfNode(matrix,2,1);
+    }
+
+    public static void main(String[] args) {
+        System.out.println("########################### TEST 1 ###########################");
+        runTest(test.getTest1());
+        System.out.println("\n\n########################### TEST 2 ###########################");
+        runTest(test.getTest2());
     }
 
 }

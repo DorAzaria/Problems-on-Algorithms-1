@@ -1,75 +1,77 @@
 package PlaneProblem;
-
+import java.util.HashSet;
 import java.util.Vector;
 
 public class pathsRecursion {
 
-    public static String getCornerPath(Node[][] matrix) {
-        return getOnePath(matrix,matrix.length-1,matrix[0].length-1);
+    public static void getCornerPath(Node[][] matrix) {
+        int i = matrix.length-1, j = matrix[0].length-1;
+        System.out.println("\n===== getCornerPath ("+i+","+j+") recursive =========");
+        getPath(matrix, matrix[i][j],new Vector<>(),i,j);
+        printPaths(matrix[i][j],i,j);
     }
 
-    public static String getOnePath(Node[][] matrix, int i, int j) {
-        String direction = "("+i+","+j+")-> ";
-        return getOnePathRec(matrix,i,j) + direction;
+    public static void getPathOfNode(Node[][] matrix, int i, int j) {
+        System.out.println("\n===== getPathOfNode ("+i+","+j+") recursive =========");
+        if(i < matrix.length && j < matrix[0].length) {
+            getPath(matrix, matrix[i][j],new Vector<>(),i,j);
+            printPaths(matrix[i][j],i,j);
+        }
     }
 
-    private static String getOnePathRec(Node[][] matrix, int i, int j) {
-        if(i == 0 || j == 0) {
-            return "(0,0)-> ";
-        }
-        int fromAbove = matrix[i-1][j].entry + matrix[i-1][j].goDown;
-        int fromLeft = matrix[i][j-1].entry + matrix[i][j-1].goRight;
+    public static void getPath(Node[][] matrix, Node source,Vector<Node> path, int i, int j) {
+        path.add(matrix[i][j]);
+        if(i == 0 && j == 0) {
+            source.myShortestPath.add(path);
+        } else if(i == 0) {
+            getPath(matrix,source,path,i,j-1);
+        } else if(j == 0) {
+            getPath(matrix,source,path,i-1,j);
+        } else {
+            int fromAbove = matrix[i-1][j].entry + matrix[i-1][j].goDown;
+            int fromLeft = matrix[i][j-1].entry + matrix[i][j-1].goRight;
 
-        if(fromAbove > fromLeft) {
-            String direction = "("+i+","+(j-1)+")-> ";
-            return getOnePathRec(matrix,i,j-1) + direction;
-        }
+            if(fromAbove > fromLeft) {
+                getPath(matrix,source,path,i,j-1);
+            } else if(fromAbove < fromLeft) {
+                getPath(matrix,source,path,i-1,j);
+            } else {
+                Vector<Node> pathLeft = new Vector<>(path);
+                getPath(matrix,source,pathLeft,i,j-1);
 
-        String direction = "("+(i-1)+","+j+")-> ";
-        return getOnePathRec(matrix,i-1,j) + direction;
+                Vector<Node> pathAbove = new Vector<>(path);
+                getPath(matrix,source,pathAbove,i-1,j);
+            }
+        }
     }
 
     public static void getAllPaths(Node[][] matrix) {
-        System.out.println("\n===== ALL PATHS ====");
-        getAllRec(matrix,1,1);
+        System.out.println("\n===== getAllPaths recursive =========");
+        allPathsRec(matrix,1,1);
     }
 
-    private static void getAllRec(Node[][] matrix, int i, int j) {
-        if(i == matrix.length)
+    public static void allPathsRec(Node[][] matrix, int i, int j) {
+        if(i == matrix.length) {
             return;
+        }
         if(j == matrix[0].length) {
-            getAllRec(matrix,i+1,1);
-        }else {
-            Vector<String> paths = new Vector<>();
-            getPaths(matrix,i,j,"("+i+","+j+")",paths);
-            String ans = "";
-            for(String str : paths) {
-                ans = ans + "\n" +  str;
-            }
-            matrix[i][j].myShortestPath = ans;
-            System.out.println("Path of ("+i+","+j+") is [ "+ matrix[i][j].myShortestPath +"\n]");
-            getAllRec(matrix,i,j+1);
-        }
-    }
-
-    private static void getPaths(Node[][] matrix, int i, int j, String ans, Vector<String> paths) {
-        if(i == 0 || j == 0) {
-            ans = "(0,0)-> " + ans;
-            paths.add(ans);
-            return;
-        }
-        int fromAbove = matrix[i-1][j].entry + matrix[i-1][j].goDown;
-        int fromLeft = matrix[i][j-1].entry + matrix[i][j-1].goRight;
-        String directionLeft = "("+i+","+(j-1)+")-> ";
-        String directionAbove = "(" + (i - 1) + "," + j + ")-> ";
-        if(fromAbove > fromLeft) {
-            getPaths(matrix,i,j-1, directionLeft + ans, paths);
-        } else if(fromAbove < fromLeft) {
-            getPaths(matrix, i - 1, j, directionAbove + ans, paths);
+            allPathsRec(matrix,i+1,1);
         } else {
-            getPaths(matrix,i,j-1, directionLeft + ans, paths);
-            getPaths(matrix, i - 1, j, directionAbove + ans, paths);
+            getPath(matrix,matrix[i][j],new Vector<>(),i,j);
+            printPaths(matrix[i][j],i,j);
+            allPathsRec(matrix,i,j+1);
         }
     }
 
+    public static void printPaths(Node node,int i, int j) {
+        HashSet<Vector<Node>> set = node.myShortestPath;
+        System.out.println("Node: ("+i+","+j+") {");
+        int counter = 1;
+        for(Vector<Node> vec : set) {
+            System.out.print(counter+"): " +vec);
+            System.out.println();
+            counter++;
+        }
+        System.out.println("}");
+    }
 }
