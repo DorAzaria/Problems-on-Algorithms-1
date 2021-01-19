@@ -1,24 +1,19 @@
-# Java Algorithms and Implementations 1
-Problems on Algorithms - Java Code
+#  Java Algorithms, Implementations and Summaries (in Hebrew)
 
-## Summaries (in Hebrew)
-[Cyclic Parking Problem](https://github.com/DorAzaria/Java-Algorithms-and-Implementations/blob/main/CyclicParking/CyclicParking.pdf)<br>
-[Hare And Tortoise](https://github.com/DorAzaria/Java-Algorithms-and-Implementations/blob/main/HareAndTortoise/HareAndTortoise.pdf)<br>
-[Floyd's Cycle Detection](https://github.com/DorAzaria/Java-Algorithms-and-Implementations/blob/main/FloydsCycleDetection/FloydsCycleDetection.pdf)<br>
-[Min Max](https://github.com/DorAzaria/Java-Algorithms-and-Implementations/blob/main/MinMax/MinMax.pdf)<br>
-[Max Max](https://github.com/DorAzaria/Java-Algorithms-and-Implementations/blob/main/MaxMax/MaxMax.pdf)<br>
-[Induction VS Recursion](https://github.com/DorAzaria/Java-Algorithms-and-Implementations/blob/main/Recursion_VS_Induction/InductionVSRecursion.pdf)<br>
+From the course of Algorithms 1 - Computer Science - Ariel University.
 
-
-## Time Complexities
-
-| Algorithm | Time Complexity | 
-| ----- | ------ | 
-| Cyclic Parking Problem | O(n) | 
-| Hare and The Tortoise | O(n) |
-| Floyd's Cycle Detection | O(n+m) to get a specific node from the circle.<br>O(m) to find the first node of the circle.<br>O(m) to get the length of the arm.<br>O(n) to get the length of the circle. |
-| Minimum Value in a numeric array | O(n) |
-| Maximum Value in a numeric array | O(n) |
-| Factorial | Recursive - O(2n)<br>Inductive - O(n) |
-| Fibonacci | Recursive - O(2^n)<br>Inductive - O(n)|
-
+[Cyclic Parking Problem](https://github.com/DorAzaria/Problems-on-Algorithms-1/blob/main/CyclicParking/CyclicParking.pdf)<br>
+[Hare And Tortoise](https://github.com/DorAzaria/Problems-on-Algorithms-1/blob/main/HareAndTortoise/HareAndTortoise.pdf)<br>
+[Floyd's Cycle Detection](https://github.com/DorAzaria/Problems-on-Algorithms-1/blob/main/FloydsCycleDetection/FloydsCycleDetection.pdf)<br>
+[Min Max](https://github.com/DorAzaria/Problems-on-Algorithms-1/blob/main/MinMax/MinMax.pdf)<br>
+[Max Max](https://github.com/DorAzaria/Problems-on-Algorithms-1/blob/main/MaxMax/MaxMax.pdf)<br>
+[Induction VS Recursion](https://github.com/DorAzaria/Problems-on-Algorithms-1/blob/main/Recursion_VS_Induction/InductionVSRecursion.pdf)<br>
+[Fibonacci and The Golden Ratio](https://github.com/DorAzaria/Problems-on-Algorithms-1/blob/main/Fibonacci/Fibonacci.pdf)<br>
+[Power](https://github.com/DorAzaria/Problems-on-Algorithms-1/blob/main/Power/Power.pdf)<br>
+[Game Number](https://github.com/DorAzaria/Problems-on-Algorithms-1/blob/main/GameNumber/GameNumber.pdf)<br>
+[LCS - Longest Common Subsequence](https://github.com/DorAzaria/Problems-on-Algorithms-1/blob/main/LongestCommonSubsequence/LCS.pdf)<br>
+[LIS - Longest Increasing Subsequence](https://github.com/DorAzaria/Problems-on-Algorithms-1/blob/main/LongestIncreasingSubsequence/LIS.pdf)<br>
+[Plane Problem](https://github.com/DorAzaria/Problems-on-Algorithms-1/blob/main/PlaneProblem/PlaneProblem.pdf)<br>
+[Largest Row Of Ones](https://github.com/DorAzaria/Problems-on-Algorithms-1/blob/main/LargestRowOfOnes/LargestRowOfOnes.pdf)<br>
+[Largest Square Of Ones](https://github.com/DorAzaria/Problems-on-Algorithms-1/blob/main/LargestSquareOfOnes/LargestSquareOfOnes.pdf)<br>
+[Little Problems](https://github.com/DorAzaria/Problems-on-Algorithms-1/blob/main/LittleProblems/LittleProblems.pdf)<br>
