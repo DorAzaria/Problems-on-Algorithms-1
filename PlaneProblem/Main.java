@@ -7,8 +7,8 @@ public class Main {
         for(int i = 0; i < matrix.length; i++) { // O(N*M)
             for(int j = 0; j < matrix[0].length; j++) {
                 Node n = matrix[i][j];
-                System.out.print("(rt="+n.goRight+", dn="+n.goDown+
-                        ", ey="+n.entry+", ph="+n.numOfPaths+")\t");
+                System.out.print(n + ":{ rt="+n.goRight+", dn="+n.goDown+
+                        ", ey="+n.entry+", ph="+n.numOfPaths+" } \t");
             }
             System.out.println();
         }
@@ -35,6 +35,8 @@ public class Main {
         runTest(test.getTest1());
         System.out.println("\n\n########################### TEST 2 ###########################");
         runTest(test.getTest2());
+        System.out.println("\n\n########################### TEST 3 ###########################");
+        runTest(test.getTest3());
     }
 
 }

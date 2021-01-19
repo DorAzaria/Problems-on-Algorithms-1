@@ -6,13 +6,19 @@ public class GenerateInduction {
 
         for(int i = 1 ; i < matrix.length; i++) { // O(N)
             matrix[i][0].entry = matrix[i-1][0].entry + matrix[i-1][0].goDown;
+            matrix[i][0].setLocation(i,0); // not a part of the algorithm, used for printing later.
+
         }
         for(int i = 1 ; i < matrix[0].length; i++) { // O(M)
             matrix[0][i].entry = matrix[0][i-1].entry + matrix[0][i-1].goRight;
+            matrix[0][i].setLocation(0,i); // not a part of the algorithm, used for printing later.
         }
 
         for(int i = 1; i < matrix.length; i++) { // O(N*M)
             for(int j = 1; j < matrix[0].length; j++) {
+
+                matrix[i][j].setLocation(i,j); // not a part of the algorithm, used for printing later.
+
                 int fromAbove = matrix[i-1][j].entry + matrix[i-1][j].goDown;
                 int fromLeft = matrix[i][j-1].entry + matrix[i][j-1].goRight;
                 matrix[i][j].entry = Math.min(fromAbove,fromLeft);
