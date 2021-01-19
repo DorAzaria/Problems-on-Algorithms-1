@@ -1,6 +1,9 @@
-package LongestIncreasingSubsequence;
+package LongestDecreasingSubsequence;
 
-public class lengthLIS {
+import java.util.Arrays;
+
+public class lengthLDS {
+
 
     public static int binarySearch(int[] sequence, int left, int right, int value) {
 
@@ -8,10 +11,10 @@ public class lengthLIS {
 
             int middle = (right+left)/2;
 
-            if(value <= sequence[middle]) {
+            if(value >= sequence[middle]) {
                 right = middle;
             }
-            else if(value > sequence[middle]) {
+            else if(value < sequence[middle]) {
                 left = middle;
             }
         }
@@ -25,10 +28,10 @@ public class lengthLIS {
         int length = 0;
         for(int i = 1 ; i < sequence.length; i++) {
 
-            if(arr[i] < sequence[0]) {
+            if(arr[i] > sequence[0]) {
                 sequence[0] = arr[i];
             }
-            else if(arr[i] > sequence[length]) {
+            else if(arr[i] < sequence[length]) {
                 length++;
                 sequence[length] = arr[i];
             } else {
@@ -36,11 +39,13 @@ public class lengthLIS {
                 sequence[index] = arr[i];
             }
         }
+
+        System.out.println(Arrays.toString(sequence));
         return length+1;
     }
 
     public static void main(String[] args) {
-        int[] arr = {5,9,4,20,6,3,7,8,11};
-        System.out.println(length(arr));
+        int[] arr = {11,8,7,3,6,20,4,9,5};
+        System.out.println(length(arr)); // prints 5
     }
 }
