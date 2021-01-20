@@ -2,7 +2,7 @@ package LongestIncreasingSubsequence;
 
 public class lengthLIS {
 
-    public static int binarySearch(int[] sequence, int left, int right, int value) {
+    public static int binarySearch(int[] sequence, int left, int right, int value) { // O(log n)
 
         while(right - left > 1) { // while we can compare min two values
 
@@ -18,12 +18,12 @@ public class lengthLIS {
         return right;
     }
 
-    public static int length(int[] arr) {
+    public static int length(int[] arr) { // O(n * log(n) )
         int[] sequence = new int[arr.length];
         sequence[0] = arr[0];
 
         int length = 0;
-        for(int i = 1 ; i < sequence.length; i++) {
+        for(int i = 1 ; i < sequence.length; i++) { // O(n)
 
             if(arr[i] < sequence[0]) {
                 sequence[0] = arr[i];
@@ -32,7 +32,7 @@ public class lengthLIS {
                 length++;
                 sequence[length] = arr[i];
             } else {
-                int index = binarySearch(sequence,0,length,arr[i]);
+                int index = binarySearch(sequence,0,length,arr[i]); // O(log n)
                 sequence[index] = arr[i];
             }
         }
