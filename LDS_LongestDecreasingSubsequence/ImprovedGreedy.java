@@ -1,4 +1,4 @@
-package LongestDecreasingSubsequence;
+package LDS_LongestDecreasingSubsequence;
 
 import java.util.Stack;
 

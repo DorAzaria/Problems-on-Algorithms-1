@@ -1,4 +1,4 @@
-package LongestCommonSubsequence;
+package LCS_LongestCommonSubsequence;
 
 public class BetterBruteForceSearch {
 

@@ -1,18 +1,25 @@
-package LongestIncreasingSubsequence;
-
+package LDS_LongestDecreasingSubsequence;
 import java.util.Arrays;
 
-public class LISviaLCS {
+public class LDSviaLCS {
 
     public static int[] LCS(int[] X) {
-        int[] Y = new int[X.length];
+        int[] temp_Y = new int[X.length];
 
         for(int i = 0; i < X.length; i++)
-            Y[i] = X[i];
+            temp_Y[i] = X[i];
 
-        Arrays.sort(Y);
+        Arrays.sort(temp_Y);
+
+        int[] Y = new int[X.length];
+
+        for(int i = X.length-1; i >= 0 ; i--) {
+            Y[X.length-1-i] = temp_Y[i];
+        }
+
         int[][] matrix = new int[X.length+1][Y.length+1];
         generateMatrix(matrix,X,Y,1,1);
+
         int i = matrix.length - 1;
         int j = matrix.length - 1;
         int end = matrix[i][j];
@@ -53,10 +60,9 @@ public class LISviaLCS {
             generateMatrix(matrix,X,Y,i,j+1);
         }
     }
-
     public static void main(String[] args) {
-        int[] arr = {1, 100, 101, 2, 3, 4, 5, 6, 7};
+        int[] arr = {7, 6, 5, 4, 3, 2, 101, 100, 1};
         System.out.println(Arrays.toString(LCS(arr)));
-        // prints [1, 2, 3, 4, 5, 6, 7]
+        // prints [7, 6, 5, 4, 3, 2, 1]
     }
 }

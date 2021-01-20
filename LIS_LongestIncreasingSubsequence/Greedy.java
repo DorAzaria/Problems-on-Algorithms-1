@@ -1,4 +1,4 @@
-package LongestIncreasingSubsequence;
+package LIS_LongestIncreasingSubsequence;
 
 import java.util.Stack;
 

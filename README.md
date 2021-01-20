@@ -11,9 +11,9 @@ From the course of Algorithms 1 - Computer Science - Ariel University.
 [Fibonacci and The Golden Ratio](https://github.com/DorAzaria/Problems-on-Algorithms-1/blob/main/Fibonacci/Fibonacci.pdf)<br>
 [Power](https://github.com/DorAzaria/Problems-on-Algorithms-1/blob/main/Power/Power.pdf)<br>
 [Game Number](https://github.com/DorAzaria/Problems-on-Algorithms-1/blob/main/GameNumber/GameNumber.pdf)<br>
-[LCS - Longest Common Subsequence](https://github.com/DorAzaria/Problems-on-Algorithms-1/blob/main/LongestCommonSubsequence/LCS.pdf)<br>
-[LIS - Longest Increasing Subsequence](https://github.com/DorAzaria/Problems-on-Algorithms-1/blob/main/LongestIncreasingSubsequence/LIS.pdf)<br>
-[LDS - Longest Decreasing Subsequence](https://github.com/DorAzaria/Problems-on-Algorithms-1/blob/main/LongestDecreasingSubsequence/LDS.pdf)<br>
+[LCS - Longest Common Subsequence](https://github.com/DorAzaria/Problems-on-Algorithms-1/blob/main/LCS_LongestCommonSubsequence/LCS.pdf)<br>
+[LIS - Longest Increasing Subsequence](https://github.com/DorAzaria/Problems-on-Algorithms-1/blob/main/LIS_LongestIncreasingSubsequence/LIS.pdf)<br>
+[LDS - Longest Decreasing Subsequence](https://github.com/DorAzaria/Problems-on-Algorithms-1/blob/main/LDS_LongestDecreasingSubsequence/LDS.pdf)<br>
 [Plane Problem](https://github.com/DorAzaria/Problems-on-Algorithms-1/blob/main/PlaneProblem/PlaneProblem.pdf)<br>
 [Largest Row Of Ones](https://github.com/DorAzaria/Problems-on-Algorithms-1/blob/main/LargestRowOfOnes/LargestRowOfOnes.pdf)<br>
 [Largest Square Of Ones](https://github.com/DorAzaria/Problems-on-Algorithms-1/blob/main/LargestSquareOfOnes/LargestSquareOfOnes.pdf)<br>

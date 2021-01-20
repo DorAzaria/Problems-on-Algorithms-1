@@ -1,4 +1,4 @@
-package LongestCommonSubsequence;
+package LCS_LongestCommonSubsequence;
 
 import java.util.HashSet;
 public class DynamicRecursion {
