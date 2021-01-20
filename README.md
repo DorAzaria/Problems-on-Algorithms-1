@@ -17,3 +17,5 @@ From the course of Algorithms 1 - Computer Science - Ariel University.
 [Largest Row Of Ones](https://github.com/DorAzaria/Problems-on-Algorithms-1/blob/main/LargestRowOfOnes/LargestRowOfOnes.pdf)<br>
 [Largest Square Of Ones](https://github.com/DorAzaria/Problems-on-Algorithms-1/blob/main/LargestSquareOfOnes/LargestSquareOfOnes.pdf)<br>
 [Little Problems](https://github.com/DorAzaria/Problems-on-Algorithms-1/blob/main/LittleProblems/LittleProblems.pdf)<br>
+[Egg Dropping Problem (Glass Ball)](https://github.com/DorAzaria/Problems-on-Algorithms-1/blob/main/EggDropping/EggDropping.pdf)<br>
+[Longest Decreasing Subsequence](https://github.com/DorAzaria/Problems-on-Algorithms-1/blob/main/LongestDecreasingSubsequence/LDS.pdf)<br>
