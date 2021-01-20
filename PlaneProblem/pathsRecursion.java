@@ -74,4 +74,19 @@ public class pathsRecursion {
         }
         System.out.println("}");
     }
+
+    public static boolean isOnPath(Node[][] matrix, int i_source,int j_source, int i_dest, int j_dest) {
+        getPathOfNode(matrix,i_source,j_source);
+        Node source = matrix[i_source][j_source];
+        Node destination = matrix[i_dest][j_dest];
+
+        HashSet<Vector<Node>> paths = source.myShortestPath;
+
+        for(Vector<Node> path : paths) {
+            if(path.contains(destination))
+                return true;
+        }
+        return false;
+    }
+
 }

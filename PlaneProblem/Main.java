@@ -15,28 +15,37 @@ public class Main {
         System.out.println();
     }
 
-    public static void runTest(Node[][] matrix) {
+    public static void runInductionTest(Node[][] matrix) {
+        // Inductive
         GenerateInduction.generateMatrix(matrix);
         printMatrix(matrix);
-
-        // Inductive
         pathsInduction.getCornerPath(matrix);
         pathsInduction.getAllPaths(matrix);
         pathsInduction.getPathOfNode(matrix,2,1);
+        System.out.println("----> is not path? " + pathsInduction.isOnPath(matrix,2,2,1,1));
+    }
 
+    public static void runRecursionTest(Node[][] matrix) {
         // Recursive
+        GenerateInduction.generateMatrix(matrix);
         pathsRecursion.getCornerPath(matrix);
         pathsRecursion.getAllPaths(matrix);
         pathsRecursion.getPathOfNode(matrix,2,1);
+        System.out.println("----> is not path? " + pathsRecursion.isOnPath(matrix,2,2,1,1));
     }
 
-    public static void main(String[] args) {
+
+        public static void main(String[] args) {
         System.out.println("########################### TEST 1 ###########################");
-        runTest(test.getTest1());
+        runInductionTest(test.getTest1());
+        runRecursionTest(test.getTest1());
         System.out.println("\n\n########################### TEST 2 ###########################");
-        runTest(test.getTest2());
+        runInductionTest(test.getTest2());
+        runRecursionTest(test.getTest2());
         System.out.println("\n\n########################### TEST 3 ###########################");
-        runTest(test.getTest3());
-    }
+        runInductionTest(test.getTest3());
+        runRecursionTest(test.getTest3());
+
+        }
 
 }
