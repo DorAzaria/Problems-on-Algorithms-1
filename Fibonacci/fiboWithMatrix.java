@@ -122,6 +122,6 @@ public class fiboWithMatrix {
 
     public static void main(String[] args) {
         System.out.println(fibMatrixN(6));
-        System.out.println(fibMatrixLog(6));
+        System.out.println(fibMatrixLog(4));
     }
 }

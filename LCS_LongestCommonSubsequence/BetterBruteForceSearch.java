@@ -3,7 +3,7 @@ package LCS_LongestCommonSubsequence;
 public class BetterBruteForceSearch {
 
     public static String[] subset(String str) {
-        String[] subsets = new String[(int)Math.pow(2,str.length()) - 1];
+        String[] subsets = new String[(int)Math.pow(2,str.length())];
 
         for(int decimal = 0 ; decimal < subsets.length; decimal++) {
             String subset = "";
@@ -45,7 +45,8 @@ public class BetterBruteForceSearch {
         return ans;
     }
 
-    public static void main(String[] args) {
+
+        public static void main(String[] args) {
         String X = "abcbdab", Y = "bdcaba";
         System.out.println(bruteForce(X,Y)); // bcba
     }

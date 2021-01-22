@@ -23,15 +23,17 @@ public class Main {
         pathsInduction.getAllPaths(matrix);
         pathsInduction.getPathOfNode(matrix,2,1);
         System.out.println("----> is not path? " + pathsInduction.isOnPath(matrix,2,2,1,1));
+        System.out.println("shortest path: " + pathsInduction.shortestPathBetween(matrix,1,1,2,2));
     }
 
     public static void runRecursionTest(Node[][] matrix) {
         // Recursive
-        GenerateInduction.generateMatrix(matrix);
+        GenerateRecursion.generateMatrix(matrix);
         pathsRecursion.getCornerPath(matrix);
         pathsRecursion.getAllPaths(matrix);
         pathsRecursion.getPathOfNode(matrix,2,1);
         System.out.println("----> is not path? " + pathsRecursion.isOnPath(matrix,2,2,1,1));
+        System.out.println("shortest path: " + pathsRecursion.shortestPathBetween(matrix,1,1,2,2));
     }
 
 

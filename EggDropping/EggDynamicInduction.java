@@ -41,6 +41,6 @@ public class EggDynamicInduction {
     }
 
     public static void main(String[] args) {
-        System.out.println("minimal: " + minimalAttempts(6,3));
+            System.out.println("minimal: " + minimalAttempts(105,2));
     }
 }

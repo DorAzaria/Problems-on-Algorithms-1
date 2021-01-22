@@ -61,4 +61,5 @@ public class BruteForceSearch {
         System.out.println(Arrays.toString(bruteForce(arr)));
         //prints [1, 2, 3, 4, 5, 6, 7]
     }
+
 }

@@ -17,6 +17,7 @@ public class DynamicRecursion {
         if(i == matrix.length)
             return;
         if(j == matrix[0].length) {
+            System.out.println();
             generateRec(matrix, X, Y, i + 1, 1);
         }
         else {
@@ -24,7 +25,7 @@ public class DynamicRecursion {
                 matrix[i][j] = matrix[i - 1][j - 1] + 1;
             else
                 matrix[i][j] = Math.max(matrix[i][j - 1], matrix[i - 1][j]);
-
+            System.out.print(matrix[i][j] + " ");
             generateRec(matrix, X, Y, i, j + 1);
         }
     }
