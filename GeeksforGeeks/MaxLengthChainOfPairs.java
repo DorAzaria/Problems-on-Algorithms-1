@@ -5,6 +5,7 @@ import java.util.Arrays;
 public class MaxLengthChainOfPairs {
 
     /*
+    An Amazon interview question.
     You are given n pairs of numbers.
     In every pair, the first number is always smaller than the second number.
     A pair (c, d) can follow another pair (a, b) if b < c.
