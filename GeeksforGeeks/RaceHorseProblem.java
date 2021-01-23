@@ -19,11 +19,14 @@ public class RaceHorseProblem {
 			for (int j = 0; j < n; j++) {
 				ans[i][j] = horses[k++];
 			}
-			count++; race(ans[i], n);
+			count++;
+			race(ans[i], n);
 		}
-		count++; race(ans, n);
-		int[] cand = {ans[n-1][n-2],ans[n-1][n-3],ans[n-2][n-1],ans[n-2][n-2],ans[n-3][n-1]};
-		count++; race(cand, 5);
+		count++;
+		race(ans, n);
+		int[] cand = { ans[n-1][n-2], ans[n-1][n-3], ans[n-2][n-1], ans[n-2][n-2], ans[n-3][n-1] };
+		count++;
+		race(cand, 5);
 		System.out.println("1st - " + ans[n-1][n-1]);
 		System.out.println("2nd - " + cand[cand.length-1]);
 		System.out.println("3nd - " + cand[cand.length-2]);
@@ -31,11 +34,14 @@ public class RaceHorseProblem {
 	}
 
 	public static void race(int[] horses, int n) {
-		if(horses.length == n) {Arrays.sort(horses);}
+		if(horses.length == n) {
+			Arrays.sort(horses);
+		}
 	}
 
 	public static void race(int[][] horses, int n) {
-		if(horses.length == n) {Arrays.sort(horses, new Comparator<int[]>() {
+		if(horses.length == n) {
+			Arrays.sort(horses, new Comparator<int[]>() {
 			@Override
 			public int compare(int[] o1, int[] o2) {
 				if(o1[n-1] < o2[n-1]) return -1;

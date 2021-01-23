@@ -91,7 +91,6 @@ public class GlassBall {
     }
 
     public static int threeBalls(int n) {
-
         int[] f3 =new int[n+1];
 
         if(n==1) {
@@ -102,16 +101,13 @@ public class GlassBall {
         }
         else { // if n>=3
             int[] f2 = new int[n+1];
-
             for(int i = 1; i < n ; i++) {
                 f2[i] = twoBalls(i);
             }
-
             f3[0] = 0;
             f3[1] = 1;
             f3[2] = 2;
             f3[3] = 2;
-
             for(int i = 4; i <= n ; i++) {
                 int min = n;
                 for(int j = 1; j < i ; j++) {
@@ -126,10 +122,11 @@ public class GlassBall {
         }
         return f3[n];
     }
+
     public static void main(String[] args) {
-        int [] arr = {1,2,3,4,5,6,7,8,9,10};
-        System.out.println(break_ball_floor(arr,2));
-        System.out.println(break_ball_floor2(arr,2));
-        System.out.println(threeBalls(10));
+        int [] arr = {1,2,3,4,5,6};
+        System.out.println(break_ball_floor(arr,3));
+        System.out.println(threeBalls(6)); // 3
+        System.out.println(twoBalls(105)); // 14
     }
 }

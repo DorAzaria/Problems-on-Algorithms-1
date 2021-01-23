@@ -10,7 +10,7 @@ class DoubleNode {
 		this.y = y;
 	}
 }
-public class Q5 {
+public class DeadZonePlaneProblem{
 	
 	public static int minPriceWuthDeadArea(DoubleNode[][] mat, Point p1, Point p2) {
 		DoubleNode[][] mat2 = createNewMatrix(mat, p1, p2);
