@@ -1,7 +1,5 @@
 package GeeksforGeeks;
 
-import java.util.Arrays;
-
 public class MaxLengthChainOfPairs {
 
     /*
