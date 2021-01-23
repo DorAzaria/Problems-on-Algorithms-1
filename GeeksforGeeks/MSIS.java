@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Stack;
 import java.util.Vector;
 
-public class MaxSIS {
+public class MSIS {
 
     /**
      * Maximum Sum Increasing Subsequence

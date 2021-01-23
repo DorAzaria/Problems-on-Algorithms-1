@@ -16,18 +16,6 @@ public class TriangleNumber {
         return ans;
     }
 
-    public static int triangle_dolev(int n) {
-        int[] f = new int[n+1];
-        f[1] = 1;
-        f[2] = 3;
-
-        for(int i = 3 ; i < n ; i++) {
-            f[i] = i  + f[i-1];
-        }
-
-        return 0;
-    }
-
     // recursive
     public static int triangleRec(int n) {
         if(n == 1) {

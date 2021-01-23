@@ -10,57 +10,49 @@ public class LRS {
     such that the two subsequence don’t have same string character at same position,
     i.e., any i’th character in the two subsequences shouldn’t have the same index in the original string.
      */
+
     public static String LRS(String str) {
 
-        int[][] lrs = new int[str.length()+1][str.length()+1];
-        int max = 0;
-        for(int i = 1 ; i < lrs.length; i++) {
-             for(int j = 1; j < lrs.length ; j++) {
-                 if(i != j) {
-                     if (str.charAt(i-1) == str.charAt(j-1)) {
-                         lrs[i][j] = lrs[j][i] + 1;
+        int[][] LRS = new int[str.length()+1][str.length()+1];
 
-                         if(lrs[i][j] == lrs[i][j-1] ) {
-                             lrs[i][j]++;
-                         }
-                     }
-                     else {
-                         lrs[i][j] = 1;
-                     }
+        for(int i = 1 ; i < LRS.length; i++) {
+            for(int j = 1; j < LRS.length; j++) {
 
-                     if(max < lrs[i][j]) {
-                         max = lrs[i][j];
-                     }
-                 } else {
-                     lrs[i][j] = 1;
-                 }
-                 System.out.print(lrs[i][j] + " ");
-             }
+                if(i != j && str.charAt(i-1) == str.charAt(j-1)) {
+                    LRS[i][j] = LRS[i-1][j-1] + 1;
+                } else {
+                    LRS[i][j] = Math.max(LRS[i-1][j], LRS[i][j-1]);
+                }
+                System.out.print(LRS[i][j] + " ");
+            }
             System.out.println();
         }
 
-        return makeString(lrs,str,max);
+        return getString(LRS,str);
     }
 
-    public static String makeString(int[][] LRS, String str, int max) {
+    public static String getString(int[][] LRS, String str) {
         String ans = "";
-        for(int i = 0; i < LRS.length; i++) {
-            boolean isDuplicated = false;
-            for(int j = 0 ; j < LRS.length; j++) {
-                if(LRS[i][j] == max) {
-                    isDuplicated = true;
-                    break;
-                }
+        int i = LRS.length-1, j = LRS.length-1;
+
+        while(i > 0 && j > 0) {
+
+            if(LRS[i][j] == LRS[i-1][j-1] + 1) {
+                ans = str.charAt(i-1) + ans;
+                i--;
+                j--;
             }
-            if(isDuplicated) {
-                ans += str.charAt(i-1);
+            else if(LRS[i][j] == LRS[i-1][j]) {
+                i--;
+            } else {
+                j--;
             }
         }
 
         return ans;
     }
     public static void main(String[] args) {
-        String str = "AAABBBEEE";
+        String str = "AABEBCDD";
         System.out.println(LRS(str));
     }
 }
