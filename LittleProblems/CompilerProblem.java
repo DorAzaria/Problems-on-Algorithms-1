@@ -3,12 +3,12 @@ package LittleProblems;
 public class CompilerProblem {
     public static void getOptimalOrder(nodeData[] programs){
         mergeSort(programs,0,programs.length);
-        //ממינים לפי זמן חלקי תדירות. כי זה המדד שביקשו ממנו
+
         int totalTime = 0;
         int totalTimeReturn = 0;
 
         int temp = 0;
-        //בדיוק כמו בעית המזכירה
+
         for (int i = 0; i < programs.length; i++) {
             System.out.println(programs[i]);
             totalTimeReturn += (totalTime+programs[i].lengthInt);
@@ -29,7 +29,7 @@ public class CompilerProblem {
             double t1 = (double) p[i].freq/p[i].lengthInt;
             double t2 = (double)p[j].freq/p[j].lengthInt;
 
-//ממיין מהגדול לקטן
+
             if(t1 > t2) temp[k++] = p[i++];
             else temp[k++] = p[j++];
         }
